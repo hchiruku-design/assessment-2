@@ -1,24 +1,14 @@
 import matplotlib.pyplot as plt
-
-
 a = 1
 b = -2
 c = 5
-
-
 x = list(range(-10, 11))
-
-
 y = []
 for i in x:
     y.append(a * i * i + b * i + c)
-
-
 print("Time (x) -> Weather Value (y)")
 for i in range(len(x)):
     print(f"{x[i]} -> {y[i]}")
-
-
 plt.plot(x, y)
 plt.xlabel("Time")
 plt.ylabel("Weather Value")
