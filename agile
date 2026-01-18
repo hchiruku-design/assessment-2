@@ -1,0 +1,26 @@
+import matplotlib.pyplot as plt
+
+n = int(input("Enter number of weather datasets: "))
+
+for s in range(n):
+    print(f"\nSprint {s+1}")
+
+    a = float(input("Enter a: "))
+    b = float(input("Enter b: "))
+    c = float(input("Enter c: "))
+
+    x = list(range(-10, 11))
+    y = [a*i*i + b*i + c for i in x]
+
+    print("Time (x) -> Weather Value (y)")
+    for i in range(len(x)):
+        print(f"{x[i]} -> {y[i]}")
+
+    plt.plot(x, y, label=f"Sprint {s+1}")
+
+plt.xlabel("Time")
+plt.ylabel("Weather Value")
+plt.title("Weather Modeling using Agile Model")
+plt.legend()
+plt.grid(True)
+plt.show()
