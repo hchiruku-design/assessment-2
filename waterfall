@@ -1,4 +1,6 @@
 import matplotlib.pyplot as plt
+matplotlib.use("TkAgg")
+
 a = 1
 b = -2
 c = 5
