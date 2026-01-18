@@ -1,0 +1,27 @@
+import matplotlib.pyplot as plt
+
+
+a = float(input("Enter a: "))
+b = float(input("Enter b: "))
+c = float(input("Enter c: "))
+
+
+x = list(range(-20, 21))
+
+
+y = []
+for i in x:
+    y.append(a * i * i + b * i + c)
+
+
+print("Time (x) -> Weather Value (y)")
+for i in range(len(x)):
+    print(f"{x[i]} -> {y[i]}")
+
+
+plt.plot(x, y, marker="o")
+plt.xlabel("Time")
+plt.ylabel("Weather Value")
+plt.title("Weather Modeling - Iterative Model")
+plt.grid(True)
+plt.show()
